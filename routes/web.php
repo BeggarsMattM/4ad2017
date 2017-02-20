@@ -21,4 +21,14 @@ Route::get('/home', 'HomeController@index');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
   Route::get('/', 'MiscController@admin');
+
+  Route::resource('features',     'AdminFeaturesController');
+  Route::resource('news',         'AdminNewsController');
+  Route::resource('releases',     'AdminReleasesController');
+  Route::resource('artists',      'AdminArtistsController');
+  Route::resource('videos',       'AdminVideosController');
+  Route::resource('playlists',    'AdminPlaylistsController');
+  Route::resource('sleevenotes',  'AdminSleevenotesController');
+  Route::resource('offers',       'AdminOffersController');
+  Route::resource('infosegments', 'AdminInfoSegmentsController');
 });

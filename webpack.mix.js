@@ -13,3 +13,9 @@ const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+mix.combine([
+  'public/css/fourad3.css',
+  'public/css/slick.css',
+  'public/css/slick-theme.css',
+  'public/css/colorbox.css'
+], 'public/css/all.css');   

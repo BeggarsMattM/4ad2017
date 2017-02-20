@@ -13,7 +13,7 @@ class Role
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $role)
     {
         if ($request->user()->role != $role) {
           return redirect('/');

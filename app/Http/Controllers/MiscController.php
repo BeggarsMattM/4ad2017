@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class MiscController extends Controller
 {
     public function admin() {
-      return 'admin';
+      return view('admin.dashboard');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Dusk\DuskServiceProvider;
 use Schema;
+use App\Territory;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
+        view()->composer('admin.layout', function($view) {
+          $territories = Territory::all();
+
+          $view->with('territories', $territories);
+        });
     }
 
     /**
