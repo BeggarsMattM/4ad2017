@@ -20,6 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::resource('releases', 'ReleasesController');
+Route::get('releases/filtered/{format}/{year?}', 'ReleasesController@filtered');
+
+Route::resource('offers', 'OffersController');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin']], function () {
   Route::get('/', 'MiscController@admin');

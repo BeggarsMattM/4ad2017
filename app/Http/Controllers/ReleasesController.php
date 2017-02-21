@@ -14,8 +14,13 @@ class ReleasesController extends Controller
       $releases = Release::getReleases(18);
       $years    = Release::getReleaseYears();
       $offers   = Offer::getOffers();
+      $store    = false;
 
       return view('releases.index', compact('releases', 'offers', 'years', 'store'));
 
+    }
+
+    public function filtered() {
+      
     }
 }

@@ -22,6 +22,9 @@ class CreateArtistsTable extends Migration
           $table->timestamps();
           $table->string('name');
           $table->string('slug');
+          $table->boolean('is_live')->default(true);
+          $table->boolean('is_current')->default(true);
+          $table->boolean('is_deleted')->default(false);
       });
     }
 
