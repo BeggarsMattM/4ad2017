@@ -1,0 +1,327 @@
+
+html{
+	height:100%;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	font: 13px Georgia, Times, serif;
+	background: white;
+	color: #313434;
+	line-height:22px;
+	-webkit-font-smoothing: antialiased;
+	xbackground-image: url('../images/legacy/bg.gif');
+	background-width: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: #000;
+	height:100%;
+}
+ul, ol, h1, h2, h3, h4, h5, p{
+	margin: 0px;
+	padding: 0px;
+}
+@-webkit-keyframes fade {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+@-moz-keyframes fade {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+@-keyframes fade {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+
+/**** Skrollr ****/
+
+	.skrollr-desktop body {
+		height:100% !important;
+	}
+
+	.parallax-image-wrapper {
+		position:fixed;
+		left:0;
+		width:100%;
+		overflow:hidden;
+	}
+
+	.parallax-image-wrapper-50 {
+		height:50%;
+		top:-50%;
+	}
+
+	.parallax-image-wrapper-100 {
+		height:100%;
+		top:-100%;
+	}
+
+	.parallax-image {
+		display:none;
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:cover;
+	}
+
+	.parallax-image-50 {
+		height:200%;
+		top:-50%;
+	}
+
+	.parallax-image-100 {
+		height:100%;
+		top:0;
+	}
+
+	.parallax-image.skrollable-between {
+		display:block;
+	}
+
+	.no-skrollr .parallax-image-wrapper {
+		display:none !important;
+	}
+
+	#skrollr-body {
+		height:100%;
+		overflow:visible;
+		position:relative;
+	}
+
+	.gap {
+		background:transparent center no-repeat;
+		background-size:cover;
+	}
+
+	.skrollr .gap {
+		background:transparent !important;
+	}
+
+	.gap-50 {
+		height:50%;
+	}
+
+	.gap-100 {
+		min-height:100%;
+	}
+
+	.header, .content {
+		background:#fff;
+
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	.content-full {
+		min-height:100%;
+		overflow:visible;
+	}
+
+	#done {
+		min-height:100%;
+		overflow:visible;
+	}
+	
+	
+	
+/**** End of Skrollr****/	
+
+
+
+p {
+	margin-bottom: 20px;
+}
+
+a {
+	color: #7b7878;
+	text-decoration: none;
+	font-style:italic;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+}a:hover {
+	color:#313434;
+}
+img {
+	border:none;
+}
+h1{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:300;
+}
+h1 a{
+	background:url(../images/nav_logo.png) 0px 0px no-repeat;
+	width:97px;
+	height:35px;
+	border:white 5px solid;
+	text-indent: -5000em;
+	transition: 0.2s ease-in-out;
+	display:block;
+}
+h1 a:hover{
+	background:url(../images/nav_logo.png) 0px -35px no-repeat;
+}
+#buy{
+	position:fixed;
+	top:0;
+	left:107px;
+	z-index:301;
+	background:white;
+	height:22px;
+	padding:13px 15px 10px 10px;
+	font: 14px "DIN 1451 Mittelschrift Standard", Helvetica, Arial, sans-serif;
+	text-transform:uppercase;
+}
+#buy a{
+	font-style:normal;
+}
+#readonly{
+	position:fixed;
+	top:0;
+	right:0;
+	z-index:302;
+	background:white;
+	height:22px;
+	padding:13px 15px 10px 10px;
+	font: 14px "DIN 1451 Mittelschrift Standard", Helvetica, Arial, sans-serif;
+	text-transform:uppercase;
+}
+h2{
+	font: 22px "DIN 1451 Mittelschrift Standard", Helvetica, Arial, sans-serif;
+	line-height: 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin:0;
+	text-align:center;
+}
+h2 img{
+	width:80%;
+	max-width:593px;
+	height:auto;
+	margin:auto;
+}
+h3{
+	font-size: 16px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	margin:0;
+	text-align:center;
+	font-weight:normal;
+}
+h4{
+	font: 14px "DIN 1451 Mittelschrift Standard", Helvetica, Arial, sans-serif;
+	line-height: 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin:0;
+	text-align:center;
+}
+#contentwrapper{
+	height:100%;
+	width:100%;
+}
+section{
+	height:100%;
+	width:100%;
+	position:relative;
+	display:block;
+}
+#intro{
+	opacity:0;
+}
+#intro{
+		-webkit-animation-name: fade;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-iteration-count: 1;
+	-moz-animation-name: fade;
+	-moz-animation-timing-function: ease-in;
+	-moz-animation-duration: 4s;
+	-moz-animation-iteration-count: 1;
+	animation-name: fade;
+	animation-timing-function: ease-in;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	opacity:1;
+}
+.white{
+	background:white;
+}
+.black{
+	background:black;
+	color:white;
+}
+.item{
+	position:absolute;
+	top:25%;
+	left:0;
+	padding:5%;
+	width:80%;
+	margin-left:5%;
+	background:black;
+	background:rgba(0,0,0,0.7);
+	color:white;
+}
+.right_text{
+	text-align:right;
+	width:25%;
+	float:right;
+	margin:15% 5% 0 0;
+}
+.side_img{
+	height:100%;
+	width:60%;
+	overflow:hidden;
+	
+}
+.side_img img{
+	width:100%;
+	height:auto;
+	vertical-align:bottom;
+}
+.full_text{
+	width:80%;
+	margin:0 10%;
+	padding:8% 0;
+}
+.triptych{
+	width:80%;
+	margin:0 10%;
+	text-align:center;
+}
+.triptych img{
+	width:31%;
+	height:auto;
+	margin:0 1% 2% 0;
+}
+.group1{
+	border:5px solid #7b7878;
+	padding:5px 10px;
+	font: 12px "DIN 1451 Mittelschrift Standard", Helvetica, Arial, sans-serif;	
+	text-transform:uppercase;
+}
